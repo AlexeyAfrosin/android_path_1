@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="@string/text_view_text"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/edit_text"
+        android:textSize="@dimen/text_size"
+        android:hint="@string/edit_text"
+        android:autofillHints="@string/edit_text" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="@string/button_text"
+        android:textAllCaps="false"
+        android:textColorHighlight="@color/white" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="@string/switch_hint"
+        android:paddingStart="@dimen/padding_start"
+        android:paddingEnd="@dimen/padding_end"
+        android:text="@string/switch_text"
+        android:textColor="@color/switch_color"
+        android:textColorHint="@color/purple_200" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="140dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:checked="true"
+        android:text="@string/checkbox_text"
+        android:textColorLink="@color/text_color_link" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top"
+        android:paddingBottom="@dimen/toggle_padding"
+        android:text="@string/toggle_button_text" />
+</LinearLayout>

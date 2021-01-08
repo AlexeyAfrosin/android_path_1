@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Android_part_1</string>
+    <string name="text_view_text">TextView</string>
+    <string name="edit_text">EditText</string>
+    <string name="button_text">Button</string>
+    <string name="switch_text">Switch</string>
+    <string name="checkbox_text">CheckBox</string>
+    <string name="toggle_button_text">ToggleButton</string>
+    <string name="switch_hint">Switch hint</string>
+    <string name="name_task_1">Задание 1</string>
+    <string name="name_task_2">Задание 2</string>
+    <string name="name_task_3">Задание 3</string>
+
+    <string name="edit_text_text">edit Text</string>
+    <string name="text_person_name">text Person Name</string>
+    <string name="text_phone">text phone</string>
+    <string name="text_number">text number</string>
+    <string name="text_email_address">textEmailAddress</string>
+    <string name="text_uri">textUri</string>
+    <string name="selected_date">Выбранная дата: %s.%s.%s</string>
 </resources>
