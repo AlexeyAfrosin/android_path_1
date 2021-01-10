@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">Android_part_1</string>
+    <string name="app_name">Simple calculator</string>
+    <string name="dig_0">0</string>
+    <string name="dig_1">1</string>
+    <string name="dig_2">2</string>
+    <string name="dig_3">3</string>
+    <string name="dig_4">4</string>
+    <string name="dig_5">5</string>
+    <string name="dig_6">6</string>
+    <string name="dig_7">7</string>
+    <string name="dig_8">8</string>
+    <string name="dig_9">9</string>
+    <string name="bt_add">+</string>
+    <string name="bt_minus">-</string>
+    <string name="bt_multiplication">x</string>
+    <string name="bt_equally">=</string>
+    <string name="bt_comma">,</string>
+    <string name="bt_ac">AC</string>
+    <string name="bt_del">DEL</string>
+    <string name="bt_percent">%</string>
+    <string name="bt_division">&#247;</string>
 </resources>
