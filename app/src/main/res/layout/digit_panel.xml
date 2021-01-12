@@ -185,9 +185,8 @@
         android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
-        android:layout_marginEnd="@dimen/tb_equally_margin_end"
         android:text="@string/bt_equally"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bt_add"
         app:layout_constraintStart_toEndOf="@+id/bt_comma"
         app:layout_constraintTop_toBottomOf="@+id/bt_add" />
 
