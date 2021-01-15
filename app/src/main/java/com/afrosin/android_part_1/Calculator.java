@@ -1,10 +1,11 @@
 package com.afrosin.android_part_1;
 
 
+import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Calculator {
+public class Calculator implements Serializable {
 
     private final String OPERATION_PERCENT = "%";
     private final String OPERATION_DIVISION = "/";

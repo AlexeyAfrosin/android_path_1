@@ -1,10 +1,12 @@
 package com.afrosin.android_part_1;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormatSymbols;
@@ -14,6 +16,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView twCurrentOperation;
     private TextView twCalcResult;
     private Calculator calculator;
+    private final static String KEY_CALCULATOR = "calculator";
+    private final static String KEY_CURRENT_OPERATION = "current_operation";
+    private final static String KEY_RESULT_OPERATION = "result_operation";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Button btTmp = findViewById(getResources().getIdentifier(String.format("bt_dig_%d", i), "id", getPackageName()));
             btTmp.setOnClickListener(this);
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        instanceState.putSerializable(KEY_CALCULATOR, calculator);
+        instanceState.putString(KEY_CURRENT_OPERATION, twCurrentOperation.getText().toString());
+        instanceState.putString(KEY_RESULT_OPERATION, twCalcResult.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        calculator = (Calculator) instanceState.getSerializable(KEY_CALCULATOR);
+        twCalcResult.setText(instanceState.getString(KEY_RESULT_OPERATION));
+        twCurrentOperation.setText(instanceState.getString(KEY_CURRENT_OPERATION));
     }
 
     @Override
@@ -110,7 +131,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (strCurrentOperation.replaceAll(String.format("\\%s", getStringById(this, R.string.bt_digit_separator)), "").length() > 0) {
             double result = calculator.getCalcResult();
-            twCalcResult.append(String.format(getDigitFormat(result, twCalcResult.getText().toString()), strCurrentOperation, getStringById(this, R.string.bt_equally), result));
+
+            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                twCalcResult.append(String.format(getDigitFormat(result, twCalcResult.getText().toString()), strCurrentOperation, getStringById(this, R.string.bt_equally), result));
+            } else {
+                String oldStr = twCalcResult.getText().toString();
+                twCalcResult.setText("");
+                twCalcResult.append(String.format(getDigitFormat(result, oldStr), strCurrentOperation, getStringById(this, R.string.bt_equally), result));
+                twCalcResult.append("\n");
+                twCalcResult.append(oldStr);
+            }
         }
 
         // очищаем
