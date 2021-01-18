@@ -14,7 +14,7 @@
     <string name="bt_minus">-</string>
     <string name="bt_multiplication">x</string>
     <string name="bt_equally">=</string>
-    <string name="bt_comma">,</string>
+    <string name="bt_digit_separator">,</string>
     <string name="bt_ac">AC</string>
     <string name="bt_del">DEL</string>
     <string name="bt_percent">%</string>
