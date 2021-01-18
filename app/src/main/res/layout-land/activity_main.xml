@@ -29,8 +29,8 @@
 
     <TextView
         android:id="@+id/tw_calc_result"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="@dimen/zero_height"
         android:layout_marginTop="@dimen/margin_top"
         android:layout_marginEnd="@dimen/margin_end"
         android:layout_marginBottom="@dimen/margin_bottom"
