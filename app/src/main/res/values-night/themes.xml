@@ -13,4 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="OperationButton" parent="Theme.Android_part_1">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
 </resources>

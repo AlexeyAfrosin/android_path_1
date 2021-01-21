@@ -6,27 +6,29 @@
 
     >
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_ac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginTop="@dimen/margin_top"
         android:text="@string/bt_ac"
+        android:theme="@style/OperationButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_del"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginTop="@dimen/margin_top"
         android:text="@string/bt_del"
+        android:theme="@style/OperationButton"
         app:layout_constraintStart_toEndOf="@+id/bt_ac"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,16 +39,17 @@
         app:layout_constraintStart_toEndOf="@+id/bt_del"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_division"
         android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:text="@string/bt_division"
+        android:theme="@style/OperationButton"
         app:layout_constraintBottom_toTopOf="@+id/bt_dig_9"
         app:layout_constraintEnd_toEndOf="@+id/bt_multiplication"
         app:layout_constraintStart_toStartOf="@+id/bt_dig_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +67,7 @@
         app:layout_constraintStart_toEndOf="@+id/bt_dig_7"
         app:layout_constraintTop_toBottomOf="@+id/bt_del" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,18 +76,18 @@
         app:layout_constraintStart_toEndOf="@id/bt_dig_8"
         app:layout_constraintTop_toBottomOf="@+id/bt_del" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_multiplication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginEnd="@dimen/margin_end"
         android:text="@string/bt_multiplication"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/OperationButton"
         app:layout_constraintStart_toEndOf="@+id/bt_dig_9"
         app:layout_constraintTop_toBottomOf="@+id/bt_del" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,7 +96,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_dig_7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -102,7 +105,7 @@
         app:layout_constraintStart_toEndOf="@+id/bt_dig_4"
         app:layout_constraintTop_toBottomOf="@id/bt_dig_8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,18 +114,18 @@
         app:layout_constraintStart_toEndOf="@+id/bt_dig_5"
         app:layout_constraintTop_toBottomOf="@+id/bt_dig_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_minus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginEnd="@dimen/margin_end"
         android:text="@string/bt_minus"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/OperationButton"
         app:layout_constraintStart_toEndOf="@+id/bt_dig_6"
         app:layout_constraintTop_toBottomOf="@+id/bt_multiplication" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,7 +134,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bt_dig_4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,7 +143,7 @@
         app:layout_constraintStart_toEndOf="@+id/bt_dig_1"
         app:layout_constraintTop_toBottomOf="@id/bt_dig_5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -149,18 +152,18 @@
         app:layout_constraintStart_toEndOf="@+id/bt_dig_2"
         app:layout_constraintTop_toBottomOf="@+id/bt_dig_6" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginEnd="@dimen/margin_end"
         android:text="@string/bt_add"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/OperationButton"
         app:layout_constraintStart_toEndOf="@+id/bt_dig_3"
         app:layout_constraintTop_toBottomOf="@+id/bt_minus" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_dig_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -169,7 +172,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_dig_1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_digit_separator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -178,12 +181,13 @@
         app:layout_constraintStart_toEndOf="@+id/bt_dig_0"
         app:layout_constraintTop_toBottomOf="@+id/bt_dig_2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_equally"
         android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:text="@string/bt_equally"
+        android:theme="@style/OperationButton"
         app:layout_constraintEnd_toEndOf="@+id/bt_add"
         app:layout_constraintStart_toEndOf="@+id/bt_digit_separator"
         app:layout_constraintTop_toBottomOf="@+id/bt_add" />

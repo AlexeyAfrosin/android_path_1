@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="zero_width">0dp</dimen>
+    <dimen name="zero_height">0dp</dimen>
     <dimen name="margin_top">15dp</dimen>
     <dimen name="margin_start">15dp</dimen>
     <dimen name="margin_end">15dp</dimen>
@@ -8,4 +9,6 @@
     <dimen name="tb_equally_margin_end">9dp</dimen>
     <dimen name="calc_result_text_size">15sp</dimen>
     <dimen name="entering_numbers_text_size">20sp</dimen>
+    <dimen name="ic_launcher_background_width">108dp</dimen>
+    <dimen name="ic_launcher_background_height">108dp</dimen>
 </resources>
