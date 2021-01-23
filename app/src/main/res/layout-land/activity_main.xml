@@ -9,22 +9,45 @@
 
     <TextView
         android:id="@+id/tw_current_operation"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginTop="@dimen/margin_top"
-        android:layout_marginEnd="@dimen/margin_end"
         android:gravity="end"
         android:textSize="@dimen/entering_numbers_text_size"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/bt_settings"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_settings"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_end"
+        android:clickable="true"
+        android:contentDescription="@string/bt_setting_name"
+        android:focusable="true"
+        android:theme="@style/SettingsButton"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="@dimen/float_button_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="0.1"
+        app:layout_constraintStart_toEndOf="@+id/tw_current_operation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_settings" />
 
     <include
         android:id="@+id/include"
         layout="@layout/digit_panel"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/zero_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top"
+        app:layout_constraintEnd_toStartOf="@+id/tw_calc_result"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tw_current_operation" />
 
     <TextView
@@ -34,11 +57,11 @@
         android:layout_marginTop="@dimen/margin_top"
         android:layout_marginEnd="@dimen/margin_end"
         android:layout_marginBottom="@dimen/margin_bottom"
-        android:layout_weight="1"
         android:gravity="end"
         android:textSize="@dimen/calc_result_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/include"
         app:layout_constraintTop_toBottomOf="@+id/tw_current_operation" />
 

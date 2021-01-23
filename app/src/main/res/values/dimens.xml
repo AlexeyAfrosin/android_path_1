@@ -11,4 +11,8 @@
     <dimen name="entering_numbers_text_size">20sp</dimen>
     <dimen name="ic_launcher_background_width">108dp</dimen>
     <dimen name="ic_launcher_background_height">108dp</dimen>
+    <dimen name="margin_start_second">10dp</dimen>
+    <dimen name="float_button_elevation">0dp</dimen>
+    <dimen name="ic_settings_width">24dp</dimen>
+    <dimen name="ic_settings_height">24dp</dimen>
 </resources>

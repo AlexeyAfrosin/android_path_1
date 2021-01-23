@@ -19,4 +19,6 @@
     <string name="bt_del">DEL</string>
     <string name="bt_percent">%</string>
     <string name="bt_division">&#247;</string>
+    <string name="switch_themes">Темная тема</string>
+    <string name="bt_setting_name">Настройки</string>
 </resources>

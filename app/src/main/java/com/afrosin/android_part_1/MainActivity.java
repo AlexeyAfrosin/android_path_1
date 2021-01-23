@@ -1,5 +1,6 @@
 package com.afrosin.android_part_1;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.DecimalFormatSymbols;
 
@@ -19,11 +22,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final static String KEY_CALCULATOR = "calculator";
     private final static String KEY_CURRENT_OPERATION = "current_operation";
     private final static String KEY_RESULT_OPERATION = "result_operation";
+    private final static int REQUEST_CODE_SETTING_ACTIVITY = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme();
         setContentView(R.layout.activity_main);
+        FloatingActionButton btSettings = findViewById(R.id.bt_settings);
 
         calculator = new Calculator();
         twCurrentOperation = findViewById(R.id.tw_current_operation);
@@ -41,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Button btTmp = findViewById(getResources().getIdentifier(String.format("bt_dig_%d", i), "id", getPackageName()));
             btTmp.setOnClickListener(this);
         }
+
+        btSettings.setOnClickListener(v -> {
+            Intent runSettings = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivityForResult(runSettings, REQUEST_CODE_SETTING_ACTIVITY);
+        });
     }
 
     @Override
@@ -178,4 +189,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return activity.getBaseContext().getString(resourceId);
     }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != REQUEST_CODE_SETTING_ACTIVITY) {
+            super.onActivityResult(requestCode, resultCode, data);
+            return;
+        }
+
+        if (requestCode == REQUEST_CODE_SETTING_ACTIVITY) {
+            setTheme();
+        }
+    }
+
+    private void setTheme() {
+        SettingsActivity.setTheme(this);
+    }
 }
