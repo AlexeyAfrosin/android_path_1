@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final static String KEY_RESULT_OPERATION = "result_operation";
     private final static int REQUEST_CODE_SETTING_ACTIVITY = 1;
 
+    private final static String KEY_EXTERNAL_INTENT_DIGIT = "external_intent_digit";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent runSettings = new Intent(MainActivity.this, SettingsActivity.class);
             startActivityForResult(runSettings, REQUEST_CODE_SETTING_ACTIVITY);
         });
+
+        loadExternalIntentData();
+    }
+
+    private void loadExternalIntentData() {
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle == null) {
+            return;
+        }
+        String text = bundle.getString(KEY_EXTERNAL_INTENT_DIGIT);
+        calcActionStr(twCurrentOperation, text, CalcOperation.EXTERNAL_INTENT);
     }
 
     @Override
@@ -181,7 +195,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void calcAction(TextView twCurrentOperation, int stringId, CalcOperation operation) {
-        calculator.setCurrentOperation(getStringById(this, stringId), operation);
+        calcActionStr(twCurrentOperation, getStringById(this, stringId), operation);
+    }
+
+    private void calcActionStr(TextView twCurrentOperation, String str, CalcOperation operation) {
+        calculator.setCurrentOperation(str, operation);
         twCurrentOperation.setText(calculator.getCurrentOperationAsString());
     }
 

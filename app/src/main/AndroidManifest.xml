@@ -17,6 +17,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:label="com.afrosin.android_part_1.MainActivity">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Принимаем URI с началом "calculator://intent" -->
+                <data
+                    android:host="intent"
+                    android:scheme="calculator" />
+            </intent-filter>
+
         </activity>
     </application>
 
