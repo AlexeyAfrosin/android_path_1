@@ -10,12 +10,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_part_1">
+        <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:label="com.afrosin.android_part_1.MainActivity">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Принимаем URI с началом "calculator://intent" -->
+                <data
+                    android:host="intent"
+                    android:scheme="calculator" />
+            </intent-filter>
+
         </activity>
     </application>
 

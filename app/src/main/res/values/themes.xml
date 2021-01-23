@@ -20,5 +20,8 @@
         <item name="colorOnPrimary">@color/black</item>
     </style>
 
+    <style name="SettingsButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
 
 </resources>
